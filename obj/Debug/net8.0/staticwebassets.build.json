@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "/97a3KLENuOUeWhjCidxW7T+5Mn0sXbDyRGyk2bv2W4=",
+  "Source": "InvoiceApiRest",
+  "BasePath": "_content/InvoiceApiRest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
