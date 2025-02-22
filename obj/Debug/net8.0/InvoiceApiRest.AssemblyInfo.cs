@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvoiceApiRest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5130178718887ed4130ed195d70ac1b51c767369")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01f547458161f5e51e9f030c9f1696557c5b5f31")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvoiceApiRest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvoiceApiRest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -24,9 +24,9 @@ namespace InvoiceApiRest.Data
             //    .Property(d => d.Id)
             //    .ValueGeneratedOnAdd(); // Auto Incremental
 
-            modelBuilder.Entity<Invoice>()
-                .Property(i => i.Status)
-                .HasDefaultValue("active"); // ✅ Configura el valor por defecto
+            //modelBuilder.Entity<Invoice>()
+            //    .Property(i => i.Status)
+            //    .HasDefaultValue("active"); // ✅ Configura el valor por defecto
 
             modelBuilder.Entity<Invoice>()
                 .HasMany(i => i.Details)

@@ -18,13 +18,13 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 //// Configurar con SQL Server
 builder.Services.AddDbContext<InvoiceDbContext>(options =>
     //Configuración SQL Server
-    //options.UseSqlServer(connectionString));
+    options.UseSqlServer(connectionString));
 
     // Configuración MySQL
     //options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
     // Configuración PostgresSQL
-    options.UseNpgsql(connectionString));
+    //options.UseNpgsql(connectionString));
 
 builder.Services.AddCors(options =>
 {

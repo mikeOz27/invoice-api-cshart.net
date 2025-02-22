@@ -30,7 +30,7 @@ namespace InvoiceApiRest.Models
             set => _date = value.HasValue ? DateTime.SpecifyKind(value.Value, DateTimeKind.Utc) : null;
         }
 
-        public string Status { get; set; } = "active";  // ✅ Definir valor por defecto aquí
+        //public string Status { get; set; } = "active";  // ✅ Definir valor por defecto aquí
 
         public decimal Total { get; set; }
 
