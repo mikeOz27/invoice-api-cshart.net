@@ -1,9 +1,10 @@
 using InvoiceApiRest.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+var MyAllowSpecificOrigins = "AllowAngularClient";
 
 // Add services to the container.
 
@@ -16,9 +17,14 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 //// Configurar con SQL Server
 builder.Services.AddDbContext<InvoiceDbContext>(options =>
+    //Configuración SQL Server
     //options.UseSqlServer(connectionString));
-    // Configurar MySQL
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+    // Configuración MySQL
+    //options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+    // Configuración PostgresSQL
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddCors(options =>
 {

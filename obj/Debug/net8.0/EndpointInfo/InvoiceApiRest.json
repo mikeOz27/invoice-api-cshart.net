@@ -240,8 +240,7 @@
     "schemas": {
       "Invoice": {
         "required": [
-          "customer",
-          "date"
+          "customer"
         ],
         "type": "object",
         "properties": {
@@ -260,7 +259,12 @@
           },
           "date": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
           },
           "total": {
             "type": "number",
@@ -345,6 +349,10 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
           },
           "total": {
             "type": "number",

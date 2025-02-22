@@ -20,7 +20,17 @@ namespace InvoiceApiRest.Models
         public string Customer { get; set; }
 
         [Required(ErrorMessage = "El campo fecha es obligatorio.")]
-        public DateTime Date { get; set; }
+        //public DateTime Date { get; set; }
+
+        //CONGIGURACIÓN PARA POSTGRES
+        private DateTime? _date;
+        public DateTime? Date
+        {
+            get => _date;
+            set => _date = value.HasValue ? DateTime.SpecifyKind(value.Value, DateTimeKind.Utc) : null;
+        }
+
+        public string Status { get; set; } = "active";  // ✅ Definir valor por defecto aquí
 
         public decimal Total { get; set; }
 
@@ -37,6 +47,5 @@ namespace InvoiceApiRest.Models
         {
             Total = Details.Sum(d => d.Quantity * d.UnitPrice);
         }
-
     }
 }

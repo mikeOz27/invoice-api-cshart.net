@@ -2,6 +2,7 @@
 using InvoiceApiRest.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using YourNamespace.Models.DTOs;
 
 namespace InvoiceApiRest.Controllers
