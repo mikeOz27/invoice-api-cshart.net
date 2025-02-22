@@ -9,9 +9,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copiar el archivo .csproj antes del resto para aprovechar la caché
-COPY ["InvoiceApiRest/InvoiceApiRest.csproj", "InvoiceApiRest/"]
-WORKDIR /src/InvoiceApiRest
-RUN dotnet restore
+COPY ["InvoiceApiRest.csproj", "./"]
+RUN dotnet restore "InvoiceApiRest.csproj"
 
 # Copiar el resto del código y compilar
 COPY . .
